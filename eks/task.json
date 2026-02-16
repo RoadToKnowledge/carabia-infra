@@ -1,0 +1,14 @@
+{
+  "family": "carabia-task",
+  "containerDefinitions": [
+    {
+      "name": "carabia",
+      "image": "ECR_IMAGE",
+      "memory": 512,
+      "cpu": 256,
+      "portMappings": [
+        { "containerPort": 80 }
+      ]
+    }
+  ]
+}

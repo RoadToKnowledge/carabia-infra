@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carabia-deployment
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: carabia
+  template:
+    metadata:
+      labels:
+        app: carabia
+    spec:
+      containers:
+      - name: carabia-container
+        image: <ECR_IMAGE_URL>:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: carabia-config
+        - secretRef:
+            name: carabia-secret
