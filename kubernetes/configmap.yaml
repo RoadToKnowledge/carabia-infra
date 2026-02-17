@@ -4,5 +4,5 @@ metadata:
   name: carabia-config
 data:
   ASPNETCORE_ENVIRONMENT: "Production"
-  DB_HOST: "carabia-db.xxxxxx.ap-south-1.rds.amazonaws.com"
-  DB_NAME: "carabia"
+  DB_HOST: "database-1.c9qqo86e2c1p.eu-north-1.rds.amazonaws.com"
+  DB_NAME: "database-1"

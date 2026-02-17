@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<your-username>/myapp-infra
-    targetRevision: HEAD
+    repoURL: https://github.com/RoadToKnowledge/carabia-infra
+    targetRevision: ReleaseCarabia0079_
     path: kubernetes
   destination:
     server: https://kubernetes.default.svc
