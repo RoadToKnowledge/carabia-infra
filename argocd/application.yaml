@@ -1,17 +1,37 @@
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: carabia-app
+#   namespace: argocd
+# spec:
+#   project: default
+#   source:
+#     repoURL: https://github.com/RoadToKnowledge/carabia-infra
+#     targetRevision: ReleaseCarabia0079_
+#     path: kubernetes
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: default
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: carabia-app
+  name: carabia-prod
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/RoadToKnowledge/carabia-infra
-    targetRevision: ReleaseCarabia0079_
-    path: kubernetes
+    targetRevision: Staging_Carabia_007
+    path: kubernetes/prod 
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: prod   
   syncPolicy:
     automated:
       prune: true
