@@ -30,17 +30,14 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
 
-    # ✅ ALB Config
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
 
-    # ✅ SSL CERT (🔥 MUST REPLACE)
-   alb.ingress.kubernetes.io/certificate-arn:arn:aws:acm:eu-west-1:836479504031:certificate/b55a74b3-0de8-4f44-90f0-67bc1db5bcbc
+    # ✅ SSL CERT
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:eu-west-1:836479504031:certificate/b55a74b3-0de8-4f44-90f0-67bc1db5bcbc"
 
-    # ✅ Enable HTTP + HTTPS
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
 
-    # ✅ Force HTTPS redirect
     alb.ingress.kubernetes.io/ssl-redirect: '443'
 
 spec:
