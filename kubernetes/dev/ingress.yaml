@@ -34,7 +34,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
 
     # ✅ SSL CERT
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:eu-west-1:836479504031:certificate/b55a74b3-0de8-4f44-90f0-67bc1db5bcbc"
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:eu-west-1:836479504031:certificate/5fbe70fb-94da-4dc2-8ae9-62f0bfea2578"
 
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
 
