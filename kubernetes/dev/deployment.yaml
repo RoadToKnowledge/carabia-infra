@@ -37,7 +37,6 @@
 #       - name: dataprotection-keys
 #         persistentVolumeClaim:
 #           claimName: carabia-dataprotection-pvc
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -54,25 +53,25 @@ spec:
         app: carabia
     spec:
       containers:
-      - name: carabia-container
-       image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:a795f9891d77c05ed76aac5277bc7f5ef3169a20
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
-        envFrom:
-        - configMapRef:
-            name: carabia-config
-        - secretRef:
-            name: carabia-secret
-        env:
-        - name: DATA_PROTECTION_KEYS_PATH
-          value: /mnt/dataprotection-keys
-        - name: AUTH_COOKIE_DOMAIN
-          value: .carabiacars.com
-        volumeMounts:
-        - name: dataprotection-keys
-          mountPath: /mnt/dataprotection-keys
+        - name: carabia-container
+          image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:233cf798f3c6f2debf7a2ddc9ddda0509c704f05
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: carabia-config
+            - secretRef:
+                name: carabia-secret
+          env:
+            - name: DATA_PROTECTION_KEYS_PATH
+              value: "/mnt/dataprotection-keys"
+            - name: AUTH_COOKIE_DOMAIN
+              value: ".carabiacars.com"
+          volumeMounts:
+            - name: dataprotection-keys
+              mountPath: /mnt/dataprotection-keys
       volumes:
-      - name: dataprotection-keys
-        persistentVolumeClaim:
-          claimName: carabia-dataprotection-pvc
+        - name: dataprotection-keys
+          persistentVolumeClaim:
+            claimName: carabia-dataprotection-pvc
