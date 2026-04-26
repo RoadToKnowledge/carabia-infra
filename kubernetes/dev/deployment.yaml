@@ -43,7 +43,7 @@ metadata:
   name: carabia-deployment
   namespace: dev
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: carabia
