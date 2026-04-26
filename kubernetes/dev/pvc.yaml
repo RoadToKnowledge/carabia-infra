@@ -4,6 +4,7 @@ metadata:
   name: carabia-dataprotection-pvc
   namespace: dev
 spec:
+  storageClassName: efs-sc
   accessModes:
     - ReadWriteMany
   resources:
