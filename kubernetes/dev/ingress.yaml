@@ -42,7 +42,7 @@ metadata:
 
 spec:
   rules:
-  - host: carabiacars.com
+  - host: www.carabiacars.com
     http:
       paths:
       - path: /
