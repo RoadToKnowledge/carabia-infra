@@ -29,14 +29,21 @@ metadata:
   namespace: prod
   annotations:
     kubernetes.io/ingress.class: alb
+
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
+
+    # ? SSL CERT
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:eu-west-1:836479504031:certificate/5fbe70fb-94da-4dc2-8ae9-62f0bfea2578"
+
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
+
     alb.ingress.kubernetes.io/ssl-redirect: '443'
 
 spec:
   rules:
-  - http:
+  - host: dev.carabiacars.com
+    http:
       paths:
       - path: /
         pathType: Prefix
