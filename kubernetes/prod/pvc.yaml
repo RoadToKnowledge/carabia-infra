@@ -1,12 +1,32 @@
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: carabia-dataprotection-pvc
+#   namespace: prod
+# spec:
+#   storageClassName: efs-sc
+#   accessModes:
+#     - ReadWriteMany
+#   resources:
+#     requests:
+#       storage: 1Gi
 apiVersion: v1
 kind: PersistentVolumeClaim
+
 metadata:
   name: carabia-dataprotection-pvc
   namespace: prod
+
 spec:
-  storageClassName: efs-sc
   accessModes:
     - ReadWriteMany
+
   resources:
     requests:
       storage: 1Gi
+
+  storageClassName: efs-sc
+
+  volumeMode: Filesystem
+
+  volumeName: carabia-efs-pv-prod
