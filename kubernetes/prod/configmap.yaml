@@ -5,5 +5,5 @@ metadata:
   namespace: prod
 data:
   ASPNETCORE_ENVIRONMENT: "Production"
-  DB_HOST: "carabiadev1.c9qqo86e2c1p.eu-west-1.rds.amazonaws.com"
-  DB_NAME: "carabia"
+DB_HOST: "carabia-uat-db.chqii8q8kkwo.eu-west-1.rds.amazonaws.com"
+DB_NAME: "carabia"
