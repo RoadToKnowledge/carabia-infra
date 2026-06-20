@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: CronJob
+
+metadata:
+  name: carabia-log-sync
+  namespace: dev
+
+spec:
+  schedule: "0 * * * *"
+
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: carabia-sa
+
+          restartPolicy: OnFailure
+
+          containers:
+          - name: aws-sync
+
+            image: amazon/aws-cli:latest
+
+            command:
+            - /bin/sh
+            - -c
+            - |
+              aws s3 sync /logs s3://carabia-prod-logs-eu-west-1/
+
+            volumeMounts:
+            - name: logs
+              mountPath: /logs
+
+          volumes:
+          - name: logs
+            persistentVolumeClaim:
+              claimName: carabia-logs-pvc

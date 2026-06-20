@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: PersistentVolume
+
+metadata:
+  name: carabia-logs-pv
+
+spec:
+  capacity:
+    storage: 20Gi
+
+  volumeMode: Filesystem
+
+  accessModes:
+    - ReadWriteMany
+
+  persistentVolumeReclaimPolicy: Retain
+
+  storageClassName: efs-sc
+
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-03f04ecfe22136c29

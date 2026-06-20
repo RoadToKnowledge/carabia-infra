@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+
+metadata:
+  name: carabia-logs-pvc
+  namespace: dev
+
+spec:
+  storageClassName: efs-sc
+
+  volumeName: carabia-logs-pv
+
+  accessModes:
+    - ReadWriteMany
+
+  resources:
+    requests:
+      storage: 20Gi
