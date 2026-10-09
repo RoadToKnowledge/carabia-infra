@@ -15,7 +15,7 @@
 #     spec:
 #       containers:
 #       - name: carabia-container
-#         image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:d50402b65adaabff46e9d61129c70003b8fd9e73
+#         image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:cf704e2e4fb84ccd5051f4fccbd9425079983a0c
 #         imagePullPolicy: Always
 #         ports:
 #         - containerPort: 80
@@ -55,7 +55,7 @@
 #     spec:
 #       containers:
 #         - name: carabia-container
-#           image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:d50402b65adaabff46e9d61129c70003b8fd9e73
+#           image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:cf704e2e4fb84ccd5051f4fccbd9425079983a0c
 #           imagePullPolicy: Always
 #           ports:
 #             - containerPort: 80
@@ -99,7 +99,7 @@ spec:
 
       containers:
         - name: carabia-container
-          image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:d50402b65adaabff46e9d61129c70003b8fd9e73
+          image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:cf704e2e4fb84ccd5051f4fccbd9425079983a0c
           imagePullPolicy: Always
 
           ports:
@@ -152,7 +152,7 @@ spec:
 
 #       containers:
 #         - name: carabia-container
-#           image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:d50402b65adaabff46e9d61129c70003b8fd9e73
+#           image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:cf704e2e4fb84ccd5051f4fccbd9425079983a0c
 
 #           imagePullPolicy: Always
 
