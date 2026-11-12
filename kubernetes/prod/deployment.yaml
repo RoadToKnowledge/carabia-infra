@@ -21,7 +21,7 @@ spec:
 
       containers:
         - name: carabia-container
-          image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:ba626c0aedbe2fb1fff32ad881f7cff09af94de1
+          image: 836479504031.dkr.ecr.eu-west-1.amazonaws.com/carabia-ecr:f15c348362b6ef81556b3dad4abd62fd6758f2d3
           imagePullPolicy: Always
 
           ports:
